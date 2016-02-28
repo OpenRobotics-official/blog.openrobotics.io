@@ -1,0 +1,14 @@
+{
+	"application": {
+		"dataSources": {
+			"_db": "mysqli://user:passwd@localhost/mybase"
+		},
+		"rootController": "HomepageController",
+		"defaultController": "MainController"
+	},
+	"loglevels": {
+		"finebase": "ERROR",
+		"temma": "WARN",
+		"myapp": "DEBUG"
+	}
+}
