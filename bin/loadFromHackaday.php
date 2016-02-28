@@ -8,7 +8,7 @@ $url = "https://api.hackaday.io/v1/projects/".$project_id."/logs?api_key=".$api_
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_ENCODING, "");
-curl_setopt($ch, CURLOPT_HEADER, 1);
+curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_exec($ch);
 
 ?>
