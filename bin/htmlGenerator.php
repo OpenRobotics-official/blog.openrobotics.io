@@ -13,11 +13,13 @@ $finalString = "<!DOCTYPE html>
 	<meta charset=\"utf-8\">
 	<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">
 </head>
-<body>".require_once("loadFromHackaday.php").require_once("loadFromTwitter.php")."</body></html>";
-
+<body>";
+$finalString.=include("loadFromHackaday.php");
+$finalString.=include("loadFromTwitter.php");
+$finalString.="</body></html>";
 
 $newHtml = fopen("newsfeed.html", "w") or die("Unable to open file!");
-fwrite($myfile, $finalString);
-fclose($myfile);
+fwrite($newHtml, $finalString);
+fclose($newHtml);
 
 ?>

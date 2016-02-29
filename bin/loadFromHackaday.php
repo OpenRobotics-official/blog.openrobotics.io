@@ -31,10 +31,12 @@ $project_id = "9914";
 	unset($url, $html, $ch);
 }
 
+$res = "";
 if(!empty($dataJson['logs'])) {
 	foreach ($dataJson['logs'] as $log) {
-	print("<class=\"HADTimestamp\">".gmdate("d-m H:i:s :", $log['created'])."</class><class=\"HADTitle\">".$log['title']."</class>\n<class = \"HADBody\">".$log['body']."</class>\n");
+	$res.= "<class=\"HADTimestamp\">".gmdate("d-m H:i:s :", $log['created'])."</class><class=\"HADTitle\">".$log['title']."</class>\n<class = \"HADBody\">".$log['body']."</class>\n";
 	}
 }
+return $res;
 
 ?>
