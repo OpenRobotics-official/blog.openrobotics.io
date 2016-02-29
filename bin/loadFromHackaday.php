@@ -30,14 +30,15 @@ $project_id = "9914";
 	$dataJson = json_decode($html, true);
 	unset($url, $html, $ch);
 }
-
-$res = "<ul id=\"HADFeed\">";
+//print_r($dataJson);die;
+$res = "	<ul id=\"HADFeed\">\n";
 if(!empty($dataJson['logs'])) {
 	foreach ($dataJson['logs'] as $log) {
-	$res.= "<li class=\"logHAD\"><div class=\"HADTimestamp\">".gmdate("d-m H:i:s ", $log['created'])."</div><div class=\"HADTitle\">".$log['title']."</div><div class=\"HADBody\">".$log['body']."</div></li>";
+	$logLink = "https://hackaday.io/project/".$log['project_id'].'/log/'.$log['id'];
+	$res.= "		<li class=\"logHAD\"><a class=\"HADLogLink\" href=\"$logLink\"><div class=\"HADTimestamp\">".gmdate("d-m H:i:s ", $log['created'])."</div><div class=\"HADTitle\">".$log['title']."</div></a><div class=\"HADBody\">".$log['body']."</div></li>\n";
 	}
 }
-$res .= "</ul>";
+$res .= "	</ul>\n";
 return $res;
 
 ?>
