@@ -3,16 +3,18 @@ style.css
 @author	Cyrille Benoit (cyrillebenoitpro@gmail.com)
 @copyright	© OpenRobotics, 2016
 */
-.HADTime {
-	font-size: 2;
+
+.HADTimestamp {
+	font-size: 11;
+	font-weight: 900;
 }
 
 .HADTitle {
 	position: center;
-	font-size: 3;
+	font-size: 14;
 }
 
 .HADBody {
 	position: center;
-	font-size: 2;
+	font-size: 11;
 }

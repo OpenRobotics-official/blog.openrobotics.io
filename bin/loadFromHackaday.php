@@ -34,7 +34,7 @@ $project_id = "9914";
 $res = "";
 if(!empty($dataJson['logs'])) {
 	foreach ($dataJson['logs'] as $log) {
-	$res.= "<class=\"HADTimestamp\">".gmdate("d-m H:i:s :", $log['created'])."</class><class=\"HADTitle\">".$log['title']."</class>\n<class = \"HADBody\">".$log['body']."</class>\n";
+	$res.= "<div class=\"HADTimestamp\">".gmdate("d-m H:i:s :", $log['created'])."</div><div class=\"HADTitle\">".$log['title']."</div>\n<div class=\"HADBody\">".$log['body']."</div>\n";
 	}
 }
 return $res;

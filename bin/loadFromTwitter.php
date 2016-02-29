@@ -17,7 +17,7 @@ $content = $connection->get("search/tweets", array("q"=>urlencode("#OpenRobotics
 $res = "";
 if(!empty($content['statuses'])) {
 	foreach ($content['statuses'] as $statut) {
-	$res .= "<class=\"TwitterTimestamp\">".gmdate("d-m H:i:s :", strtotime($statut['created_at']))."</class><img class=\"TwitterPicture\" src=".$statut['user']['profile_image_url']."></class><class=\"TwitterBody\">".$statut['text']."</class>\n";
+	$res .= "<div class=\"TwitterTimestamp\">".gmdate("d-m H:i:s :", strtotime($statut['created_at']))."</div><img class=\"TwitterPicture\" src=".$statut['user']['profile_image_url']."><div class=\"TwitterBody\">".$statut['text']."</div>\n";
 	}
 }
 return $res;
