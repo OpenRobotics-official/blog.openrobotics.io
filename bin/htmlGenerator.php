@@ -21,5 +21,5 @@ $finalString.="</body></html>";
 $newHtml = fopen("newsfeed.html", "w") or die("Unable to open file!");
 fwrite($newHtml, $finalString);
 fclose($newHtml);
-
+echo "newsfeed.html successfully updated.";
 ?>

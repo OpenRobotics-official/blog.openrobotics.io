@@ -1,20 +1,73 @@
-/*
-style.css
-@author	Cyrille Benoit (cyrillebenoitpro@gmail.com)
-@copyright	© OpenRobotics, 2016
-*/
+/**
+ * Feuille de style CSS pour la page NewsFeed du site OpenRobotics.io
+ * @author	Cyrille Benoit (cyrillebenoitpro@gmail.com)
+ * @copyright	© OpenRobotics, 2016
+ */
 
+/**
+ * Ensemble des logs provenant de Hackaday
+ */
+#HADFeed { 
+	position: right;
+	color: green;
+	font-size: 13;
+}
+
+/**
+ * Désigne un seul log de la liste
+ */
+.logHAD {
+
+}
+
+/**
+ * Ensemble des tweets à afficher
+ */
+#TwitterFeed {
+	color: blue;
+	position: left;
+	font-size: 13;
+}
+
+/**
+ * Désigne un seul tweet de la liste
+ */
+.Tweet {
+
+}
+
+/**
+ * Date du log HAD
+ */
 .HADTimestamp {
 	font-size: 11;
 	font-weight: 900;
 }
 
+/**
+ * Titre du log HAD
+ */
 .HADTitle {
-	position: center;
-	font-size: 14;
+
 }
 
+/**
+ * Corps du log HAD
+ */
 .HADBody {
-	position: center;
-	font-size: 11;
+
+}
+
+/**
+ * Photo de l'utilisateur Twitter
+ */
+.TwitterPicture {
+
+}
+
+/**
+ * Corps du tweet
+ */
+.TwitterBody {
+
 }

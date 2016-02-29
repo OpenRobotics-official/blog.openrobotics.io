@@ -14,11 +14,12 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 $connection = new TwitterOAuth("kE2x4pQ9dHFvEs76NEoWgqYDE", "2CsCehBPh5T88pnn932JvLx2t6OOlXpguXMxgIe9x1hPEsLvgl", "2220296553-uvjS7VSicVSd7xHlvCeALSvN0v1XM5VWUj2LbXq", "6MkED9UcFPVXV6i6TeEplBrGQXBzPCmUpUAcI804kbT7M");
 
 $content = $connection->get("search/tweets", array("q"=>urlencode("#OpenRobotics")));
-$res = "";
+$res = "<ul id=\"TwitterFeed\">";
 if(!empty($content['statuses'])) {
 	foreach ($content['statuses'] as $statut) {
-	$res .= "<div class=\"TwitterTimestamp\">".gmdate("d-m H:i:s :", strtotime($statut['created_at']))."</div><img class=\"TwitterPicture\" src=".$statut['user']['profile_image_url']."><div class=\"TwitterBody\">".$statut['text']."</div>\n";
+	$res .= "<li class=\"Tweet\"><div class=\"TwitterTimestamp\">".gmdate("d-m H:i:s ", strtotime($statut['created_at']))."</div><img class=\"TwitterPicture\" src=".$statut['user']['profile_image_url']."><div class=\"TwitterBody\">".$statut['text']."</div></li>";
 	}
 }
+$res.="</ul>";
 return $res;
 ?>
