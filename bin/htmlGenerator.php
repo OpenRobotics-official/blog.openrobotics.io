@@ -13,8 +13,10 @@ $finalString = "<!DOCTYPE html>
 	<title>OR Newsfeed</title>
 	<meta charset=\"utf-8\">
 	<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">
+	<script type=\"text/javascript\" src=\"isReloadNeeded.js\"></script>
+	<script src=\"jquery-1.12.1.min.js\"></script>
 </head>
-<body>\n";
+<body onload=\"reloadOnNeed ();\">\n<div id=\"info\" style=\"width:500px; overflow:auto; background-color:#e0d0d0;\"></div>\n";
 $finalString.=include("loadFromHackaday.php");
 $finalString.=include("loadFromTwitter.php");
 $finalString.="</body></html>";
