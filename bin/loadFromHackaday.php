@@ -16,11 +16,12 @@ $project_id = "9914";
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_ENCODING, "");
+	//curl_setopt($ch, CURLOPT_ENCODING, "");
 	curl_setopt($ch, CURLOPT_HEADER, FALSE);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 	$html = curl_exec($ch);
 	curl_close($ch);
+
 	//Prise en charge des caractères accentués et suppression des balises HTML (<p> </p> du body notemment)
 	$html = htmlspecialchars_decode($html);
 	$html = html_entity_decode($html);
@@ -30,11 +31,9 @@ $project_id = "9914";
 	unset($url, $html, $ch);
 }
 
-print_r($dataJson);
-
 if(!empty($dataJson['logs'])) {
 	foreach ($dataJson['logs'] as $log) {
-	print("<class=\"HADTimestamp\">".$log['created']."</class><class=\"HADTitle\">".$log['title']."</class>\n<class = \"HADBody\">".$log['body']."</class>\n");
+	print("<class=\"HADTimestamp\">".gmdate("d-m H:i:s :", $log['created'])."</class><class=\"HADTitle\">".$log['title']."</class>\n<class = \"HADBody\">".$log['body']."</class>\n");
 	}
 }
 
