@@ -17,12 +17,16 @@ $finalString = "<!DOCTYPE html>
 	<script src=\"jquery-1.12.1.min.js\"></script>
 </head>
 <body onload=\"reloadOnNeed ();\">\n<div id=\"info\" style=\"width:500px; overflow:auto; background-color:#e0d0d0;\"></div>\n";
-$finalString.=include("loadFromHackaday.php");
-$finalString.=include("loadFromTwitter.php");
-$finalString.="</body></html>";
 
-$newHtml = fopen("newsfeed.html", "w") or die("Unable to open file!");
-fwrite($newHtml, $finalString);
-fclose($newHtml);
-echo "newsfeed.html successfully updated.";
+$finalString .= include("loadFromHackaday.php");
+$finalString .= include("loadFromTwitter.php");
+$finalString .= "</body></html>";
+
+echo "\"$finalString\"";
+/*$htmlFile = fopen("newsfeed.html", "w") or die("Unable to open file!");
+fwrite($htmlFile, $finalString);
+fclose($htmlFile);
+
+echo "newsfeed.html successfully updated.";*/
+
 ?>
