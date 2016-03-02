@@ -16,17 +16,16 @@ $finalString = "<!DOCTYPE html>
 	<script type=\"text/javascript\" src=\"isReloadNeeded.js\"></script>
 	<script src=\"jquery-1.12.1.min.js\"></script>
 </head>
-<body onload=\"reloadOnNeed ();\">\n<div id=\"info\" style=\"width:500px; overflow:auto; background-color:#e0d0d0;\"></div>\n";
+<body>\n<div id=\"conteneur\">\n";
 
 $finalString .= include("loadFromHackaday.php");
 $finalString .= include("loadFromTwitter.php");
-$finalString .= "</body></html>";
+$finalString .= "<div id=\"bas\"></div>\n</div>\n</body></html>";
 
-echo "\"$finalString\"";
-/*$htmlFile = fopen("newsfeed.html", "w") or die("Unable to open file!");
+$htmlFile = fopen("newsfeed2.html", "w+") or die("Unable to open file!");
 fwrite($htmlFile, $finalString);
 fclose($htmlFile);
 
-echo "newsfeed.html successfully updated.";*/
+//echo "newsfeed.html successfully updated.";
 
 ?>

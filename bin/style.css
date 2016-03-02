@@ -5,12 +5,43 @@
  */
 
 /**
+ * Ensemble des deux colonnes
+ */
+#conteneur {
+	/*width:80%;*/
+	margin-top:20px; 
+	margin-left:20px; 
+	margin-right:20px; 
+	padding-bottom:25px; 
+	/*background-image:url(images/fond.jpg);*/
+	padding-top:5px;
+}
+
+/**
+ * Bas du conteneur
+ */
+#bas {
+	clear: both;
+}
+
+/**
  * Ensemble des logs provenant de Hackaday
  */
 #HADFeed { 
-	position: right;
-	color: green;
-	font-size: 13;
+	width:45%; 
+	height:80%; 
+	background-color:#0033CC; 
+	float:left;
+}
+
+/**
+ * Ensemble des tweets à afficher
+ */
+#TwitterFeed {
+	width:45%; 
+	height:80%; 
+	background-color:#0033CC; 
+	float:right;
 }
 
 /**
@@ -18,15 +49,6 @@
  */
 .logHAD {
 
-}
-
-/**
- * Ensemble des tweets à afficher
- */
-#TwitterFeed {
-	color: blue;
-	position: left;
-	font-size: 13;
 }
 
 /**
@@ -84,4 +106,18 @@
  */
 .HADLogLink {
 
+}
+
+/**
+ * Logo Twitter
+ */
+#TwitterHead {
+	text-align: center;
+}
+
+/**
+ * Logo HAD
+ */
+#HADHead {
+	text-align: center;
 }
