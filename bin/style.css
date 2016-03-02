@@ -5,16 +5,31 @@
  */
 
 /**
+ * Ensemble de la page (pour le background uniquement)
+ */
+html { 
+  background: url(images/fond.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/**
  * Ensemble des deux colonnes
  */
 #conteneur {
-	/*width:80%;*/
-	margin-top:20px; 
+	margin-top:15px; 
 	margin-left:20px; 
 	margin-right:20px; 
-	padding-bottom:25px; 
-	/*background-image:url(images/fond.jpg);*/
+	padding-bottom:25px;
 	padding-top:5px;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+	-webkit-column-width: 200px;
+	-moz-column-width: 200px;
+	column-width: 200px;
 }
 
 /**
@@ -28,84 +43,106 @@
  * Ensemble des logs provenant de Hackaday
  */
 #HADFeed { 
-	width:45%; 
-	height:80%; 
-	background-color:#0033CC; 
-	float:left;
+	list-style-type: none;
+	height:80%;
 }
 
 /**
  * Ensemble des tweets à afficher
  */
 #TwitterFeed {
-	width:45%; 
-	height:80%; 
-	background-color:#0033CC; 
-	float:right;
+	list-style-type: none;
+	height:80%;
 }
 
 /**
  * Désigne un seul log de la liste
  */
 .logHAD {
-
+	background-color: white;
+	border: 3px outset black;
+	margin-bottom: 6px;
 }
 
 /**
  * Désigne un seul tweet de la liste
  */
 .Tweet {
-
+	background-color: white;
+	border: 3px outset black;
+	margin-bottom: 6px;
 }
 
 /**
  * Date du log HAD
  */
 .HADTimestamp {
-	font-size: 11;
-	font-weight: 900;
+	margin-right: 3px;
+	text-align: right;
+	font-style: oblique;
 }
 
 /**
  * Titre du log HAD
  */
 .HADTitle {
-
+	font-weight: bold;
+	margin-top: -19px;
+	margin-left: 6px;
 }
 
 /**
  * Corps du log HAD
  */
 .HADBody {
+	margin-left: 4px;
+}
 
+/**
+ * Date du tweet
+ */
+.TwitterTimestamp {
+	margin-top: 13px;
+	margin-right: 5px;
+	text-align: right;
+	font-style: oblique;
 }
 
 /**
  * Photo de l'utilisateur Twitter
  */
 .TwitterPicture {
-
+	margin-top: -30px;
+	margin-left: 6px;
 }
 
 /**
  * Corps du tweet
  */
 .TwitterBody {
-
+	margin-left: 4px;
 }
 
 /**
  * Lien vers le tweet
  */
-.TweetLink {
-
+.TweetLink:link, .TweetLink:active, .TweetLink:visited, .TweetLink:focus  {
+	color : black;
+	text-decoration: none;
+}
+.TweetLink:hover {
+	text-decoration: underline;
 }
 
 /**
  * Lien vers le log HAD
  */
-.HADLogLink {
-
+.HADLogLink:link, .HADLogLink:active, .HADLogLink:visited, .HADLogLink:focus  {
+	color : black;
+	text-decoration: none;
+}
+.HADLogLink:hover {
+	text-decoration: underline;
 }
 
 /**
