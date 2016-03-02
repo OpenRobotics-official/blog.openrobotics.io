@@ -22,7 +22,7 @@ $finalString .= include("loadFromHackaday.php");
 $finalString .= include("loadFromTwitter.php");
 $finalString .= "<div id=\"bas\"></div>\n</div>\n</body></html>";
 
-$htmlFile = fopen("newsfeed2.html", "w+") or die("Unable to open file!");
+$htmlFile = fopen("newsfeed2.html", "w") or die("Unable to open file!");
 fwrite($htmlFile, $finalString);
 fclose($htmlFile);
 
