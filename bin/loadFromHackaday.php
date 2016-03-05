@@ -35,7 +35,7 @@ $res = "	<ul id=\"HADFeed\">\n	<div id=\"HADHead\"><img src=\"images/hackaday-ro
 if(!empty($dataJson['logs'])) {
 	foreach ($dataJson['logs'] as $log) {
 	$logLink = "https://hackaday.io/project/".$log['project_id'].'/log/'.$log['id'];
-	$res.= "		<li class=\"logHAD\"><a class=\"HADLogLink\" href=\"$logLink\"><div class=\"HADTimestamp\">".gmdate("d-m H:i:s ", $log['created'])."</div><div class=\"HADTitle\">".$log['title']."</div></a><div class=\"HADBody\">".$log['body']."</div></li>\n";
+	$res.= "		<li class=\"logHAD\"><div class=\"HADLogHead\"><a class=\"HADLogLink\" href=\"$logLink\"><div class=\"HADTitle\">".$log['title']."</div><div class=\"HADTimestamp\">".gmdate("d-m H:i:s ", $log['created'])."</div></a></div><div class=\"bas\"></div><div class=\"HADBody\">".$log['body']."</div></li>\n";
 	}
 }
 $res .= "	</ul>\n";

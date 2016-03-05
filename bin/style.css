@@ -19,23 +19,17 @@ html {
  * Ensemble des deux colonnes
  */
 #conteneur {
-	margin-top:15px; 
-	margin-left:20px; 
-	margin-right:20px; 
-	padding-bottom:25px;
-	padding-top:5px;
-	-webkit-column-count: 2;
-	-moz-column-count: 2;
-	column-count: 2;
-	-webkit-column-width: 200px;
-	-moz-column-width: 200px;
-	column-width: 200px;
+	margin-top:2%; 
+	margin-left:2%; 
+	margin-right:2%; 
+	padding-bottom:3%;
+	padding-top:1%;
 }
 
 /**
  * Bas du conteneur
  */
-#bas {
+.bas {
 	clear: both;
 }
 
@@ -43,16 +37,23 @@ html {
  * Ensemble des logs provenant de Hackaday
  */
 #HADFeed { 
+	padding: 0px;
 	list-style-type: none;
+	float: left;
 	height:80%;
+	width: 48%;
 }
 
 /**
  * Ensemble des tweets à afficher
  */
 #TwitterFeed {
+	padding: 0px;
 	list-style-type: none;
+	float: right;
+	display: inline;
 	height:80%;
+	width: 48%;
 }
 
 /**
@@ -61,7 +62,7 @@ html {
 .logHAD {
 	background-color: white;
 	border: 3px outset black;
-	margin-bottom: 6px;
+	margin-bottom: 1.5%;
 }
 
 /**
@@ -70,25 +71,32 @@ html {
 .Tweet {
 	background-color: white;
 	border: 3px outset black;
-	margin-bottom: 6px;
+	margin-bottom: 1.5%;
 }
 
 /**
  * Date du log HAD
  */
 .HADTimestamp {
-	margin-right: 3px;
+	float: right;
 	text-align: right;
 	font-style: oblique;
+	width: auto;
+	text-decoration: inherit;
+	display: inline;
 }
 
 /**
  * Titre du log HAD
  */
 .HADTitle {
+	padding: 0px;
 	font-weight: bold;
-	margin-top: -19px;
-	margin-left: 6px;
+	float: left;
+	text-align: left;
+	width: auto;
+	text-decoration: inherit;
+	display: inline;
 }
 
 /**
@@ -102,18 +110,24 @@ html {
  * Date du tweet
  */
 .TwitterTimestamp {
-	margin-top: 13px;
-	margin-right: 5px;
+	float: right;
+	padding: 0px;
+	padding-top: 15px;
 	text-align: right;
+	display: inline;
 	font-style: oblique;
+	text-decoration: inherit;
 }
 
 /**
  * Photo de l'utilisateur Twitter
  */
 .TwitterPicture {
-	margin-top: -30px;
-	margin-left: 6px;
+	float: left;
+	padding: 0px;
+	text-align: left;
+	display: inline;
+	text-decoration: inherit;
 }
 
 /**
@@ -149,6 +163,7 @@ html {
  * Logo Twitter
  */
 #TwitterHead {
+	float: none;
 	text-align: center;
 }
 
@@ -156,5 +171,28 @@ html {
  * Logo HAD
  */
 #HADHead {
+	float: none;
 	text-align: center;
+}
+
+/**
+ * Meta d'un tweet
+ */
+.TweetHead {
+	margin-top:3px; 
+	margin-left:3px; 
+	margin-right:3px;
+	padding-bottom:3px;
+	padding-top:1px;
+}
+
+/**
+ * Meta d'un log
+ */
+.HADLogHead {
+	margin-top:3px; 
+	margin-left:3px; 
+	margin-right:3px;
+	padding-bottom:3px;
+	padding-top:1px;
 }

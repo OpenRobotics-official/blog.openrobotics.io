@@ -19,9 +19,10 @@ if(!empty($content['statuses'])) {
 	foreach ($content['statuses'] as $statut) {
 //print_r($statut);die;
 	$tweetLink = "https://twitter.com/".$statut['user']['screen_name'].'/status/'.$statut['id_str'];
-	$res .= "		<li class=\"Tweet\"><a class=\"TweetLink\" href=\"$tweetLink\"><div class=\"TwitterTimestamp\">".gmdate("d-m H:i:s ", strtotime($statut['created_at']))."</div><img class=\"TwitterPicture\" src=".$statut['user']['profile_image_url']."></a><div class=\"TwitterBody\">".$statut['text']."</div></li>\n";
+	$res .= "		<li class=\"Tweet\"><div class=\"TweetHead\"><a class=\"TweetLink\" href=\"$tweetLink\"><img class=\"TwitterPicture\" src=".$statut['user']['profile_image_url']."><div class=\"TwitterTimestamp\">".gmdate("d-m H:i:s ", strtotime($statut['created_at']))."</div></a></div><div class=\"bas\"></div><div class=\"TwitterBody\">".$statut['text']."</div></li>\n";
 	}
 }
 $res .= "	</ul>\n";
 return $res;
 ?>
+
