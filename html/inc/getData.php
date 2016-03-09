@@ -17,7 +17,7 @@
 }
 //Si on a déjà fait une maj dans les 3 minutes et que le fichier existe
 if ($fileExists && $dateActuelle-$dateModif < 3*60) {
-	echo '1';
+	echo $dateActuelle-$dateModif;
 	return;
 }
 

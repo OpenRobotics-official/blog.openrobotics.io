@@ -10,6 +10,6 @@ setInterval(function () {
         });
       }
       else
-        console.log("no need to refresh");
+        console.log("no need to refresh : " + output + " seconds since last update.");
     }
   });}, 10000);

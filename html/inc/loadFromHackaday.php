@@ -31,7 +31,7 @@ $project_id = "9914";
 	unset($url, $html, $ch);
 }
 //print_r($dataJson);die;
-$res = "	<ul id=\"HADFeed\">\n	<div id=\"HADHead\"><img src=\"./img/hackaday-round.png\" width=\"100\" height=\"100\"></div>\n";
+$res = "	<ul id=\"HADFeed\">\n	<div id=\"HADHead\"><img src=\"./img/h.png\" width=\"100\" height=\"100\"></div>\n";
 if(!empty($dataJson['logs'])) {
 	foreach ($dataJson['logs'] as $log) {
 	$logLink = "https://hackaday.io/project/".$log['project_id'].'/log/'.$log['id'];
