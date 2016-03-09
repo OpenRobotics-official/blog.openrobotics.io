@@ -8,7 +8,7 @@
  * Ensemble de la page (pour le background uniquement)
  */
 html { 
-  background: url(images/fond.png) no-repeat center center fixed; 
+  background: url(../img/fond.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
