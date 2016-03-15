@@ -15,7 +15,7 @@ $connection = new Abraham\TwitterOAuth\TwitterOAuth("kE2x4pQ9dHFvEs76NEoWgqYDE",
 $content = $connection->get("search/tweets", array("q"=>urlencode("#OpenRobotics")));
 $content = json_decode(json_encode($content), true);
 
-$res = "	<ul id=\"TwitterFeed\">\n	<div id=\"TwitterHead\"><img src=\"./img/t.png\" width=\"100\" height=\"100\"></div>\n";
+$res = "	<ul id=\"TwitterFeed\">\n	<div id=\"TwitterHead\"><img src=\"./img/t.svg\" width=\"35%\"></div>\n";
 if(!empty($content['statuses'])) {
 	foreach ($content['statuses'] as $statut) {
 	$tweetLink = "https://twitter.com/".$statut['user']['screen_name'].'/status/'.$statut['id_str'];

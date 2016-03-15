@@ -4,16 +4,19 @@
  * @copyright	© OpenRobotics, 2016
  */
 
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
 /**
  * Ensemble de la page (pour le background uniquement)
  */
-html { 
+/*html { 
+  font-family: 'Roboto', sans-serif;
   background: url(../img/fond.png) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+}*/
 
 /**
  * Ensemble des deux colonnes
@@ -52,8 +55,8 @@ html {
 	list-style-type: none;
 	float: right;
 	display: inline;
-	height:80%;
-	width: 48%;
+	/*height:80%;
+	width: 48%;*/
 }
 
 /**
