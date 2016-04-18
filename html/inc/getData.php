@@ -15,9 +15,9 @@
 	}
 	$dateActuelle = gettimeofday()['sec'];
 }
-//Si on a déjà fait une maj dans les 3 minutes et que le fichier existe
-if ($fileExists && $dateActuelle-$dateModif < 3*60) {
-	echo $dateActuelle-$dateModif;
+//Si on a déjà fait une maj dans les 10 minutes et que le fichier existe
+if ($fileExists && $dateActuelle-$dateModif < 10*60) {
+	echo $dateActuelle - $dateModif;
 	return;
 }
 
